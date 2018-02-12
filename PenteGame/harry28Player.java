@@ -4,7 +4,7 @@ import java.util.Random;
 /**
  * AI player by harry28@seas.upenn.edu, Zhao Li
  * @author lizhao
- *
+ * 
  */
 public class harry28Player implements Player {
 	Stone myColor;
@@ -281,7 +281,7 @@ public class harry28Player implements Player {
 		}//nothing found, return (9,9)
 		return testCoordinate;
 	}
-	
+	//needs more  
 	private Coordinate checkTriangle(Board b) {
 		for (int i = 0; i < 19; i++) {
 			for (int j = 0; j < 19; j++) {
