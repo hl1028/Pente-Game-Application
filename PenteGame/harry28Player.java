@@ -501,6 +501,21 @@ public class harry28Player implements Player {
 			}
 		//not found, next spot
 		}
+		// *O*X
+	    //   ^    didn't write this for tournament
+		if (b.pieceAt(allCoordinate[i][j]) == Stone.EMPTY) {	//if current spot is myColor
+			for (int[] d: vectors) {							//check 4/8 vectors
+				//System.out.println(d[0]+","+d[1]);
+				if (0<=i+2*d[0] && i+2*d[0]<=18 && 0<=j+2*d[1] && j+2*d[1]<=18 && 0<=i-d[0] && i-d[0]<=18 && 0<=j-d[1] && j-d[1]<=18) {
+					if (b.pieceAt(allCoordinate[i-d[0]][j-d[1]]) == opponentColor && b.pieceAt(allCoordinate[i+d[0]][j+d[1]]) == myColor && b.pieceAt(allCoordinate[i+2*d[0]][j+2*d[1]]) == Stone.EMPTY) {
+						return true;
+					}
+					//if found return blockng spot
+				}
+			//not found, next direction
+			}
+		//not found, next spot
+		}
 
 		return false;
 	}

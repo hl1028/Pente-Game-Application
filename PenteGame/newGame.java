@@ -11,7 +11,7 @@ public class newGame {
 	
 	public static void main(String[] args) throws InterruptedException {
 		String goFirst = "y";	//y is harry28 RED, n is qiyuan RED
-		for (int i=0; i<10; i++) {
+		for (int i=0; i<1000; i++) {
 			result = play(goFirst);
 			if (result == Stone.RED && goFirst == "y") {
 				harry28++;
